@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            HomeworkTheme {
+            MaterialTheme {
                 FirstScreen { studentInfo ->
                     startActivity(SecondActivity.createIntent(this, studentInfo))
                 }
@@ -44,7 +44,6 @@ private fun FirstScreen(onOpenSecondScreen: (String) -> Unit) {
             verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Text(stringResource(R.string.first_screen_title), style = MaterialTheme.typography.headlineSmall)
             Text(name, style = MaterialTheme.typography.titleLarge)
             Text(group, style = MaterialTheme.typography.bodyLarge)
             Button(onClick = { onOpenSecondScreen(studentInfo) }) {

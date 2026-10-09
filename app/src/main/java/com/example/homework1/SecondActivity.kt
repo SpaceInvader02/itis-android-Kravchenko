@@ -16,17 +16,15 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
 class SecondActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        val studentInfo = intent.getStringExtra(EXTRA_STUDENT_INFO)
-            ?: getString(R.string.missing_student_info)
+        val studentInfo = intent.getStringExtra(EXTRA_STUDENT_INFO).orEmpty()
         setContent {
-            HomeworkTheme { SecondScreen(studentInfo) }
+            MaterialTheme { SecondScreen(studentInfo) }
         }
     }
 
@@ -47,7 +45,6 @@ private fun SecondScreen(studentInfo: String) {
             verticalArrangement = Arrangement.spacedBy(16.dp, Alignment.CenterVertically),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Text(stringResource(R.string.second_screen_title), style = MaterialTheme.typography.headlineSmall)
             Text(studentInfo, style = MaterialTheme.typography.titleLarge)
         }
     }
