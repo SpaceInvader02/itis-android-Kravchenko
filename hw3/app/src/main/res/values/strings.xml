@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Notifications &amp; Permissions</string>
+
+    <!-- Первый экран: разрешение -->
+    <string name="permission_required_message">Для нормальной работы приложения нужно предоставить разрешение на показ уведомлений</string>
+    <string name="open_settings">Открыть настройки</string>
+
+    <!-- Первый экран: форма уведомления -->
+    <string name="hint_notification_title">Заголовок уведомления</string>
+    <string name="hint_notification_text">Текст уведомления</string>
+    <string name="checkbox_ongoing">Уведомление нельзя отклонить свайпом</string>
+    <string name="label_importance">Важность уведомления</string>
+    <string name="importance_min">Min</string>
+    <string name="importance_default">Default</string>
+    <string name="importance_high">High</string>
+    <string name="send_notification">Отправить уведомление</string>
+    <string name="open_second_screen">Второй экран</string>
+
+    <!-- Первый экран: управление активными уведомлениями -->
+    <string name="hint_notification_id">ID активного уведомления</string>
+    <string name="edit_notification">Редактировать</string>
+    <string name="delete_all_notifications">Удалить все</string>
+
+    <!-- Каналы уведомлений -->
+    <string name="channel_min_name">Минимальная важность</string>
+    <string name="channel_default_name">Стандартная важность</string>
+    <string name="channel_high_name">Высокая важность</string>
+
+    <!-- Второй экран: координаты -->
+    <string name="location_hint">Для определения координат нажмите на кнопку</string>
+    <string name="location_permission_denied">Для определения координат предоставьте разрешение на доступ к местоположению</string>
+    <string name="get_location">Определить координаты</string>
+    <string name="coordinates_format">Широта: %1$f\nДолгота: %2$f</string>
+    <string name="coordinates_unavailable">Не удалось определить координаты</string>
+</resources>
